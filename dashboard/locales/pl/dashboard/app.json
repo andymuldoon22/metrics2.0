@@ -1,0 +1,17 @@
+{
+    "title": "Przykładowy panel",
+    "one-column": "Jedna kolumna",
+    "two-columns": "Dwie kolumny",
+    "two-columns-30-70": "Dwie kolumny 30:70",
+    "two-columns-70-30": "Dwie kolumny 70:30",
+    "three-columns": "Trzy kolumny",
+    "three-columns-30-40-30": "Trzy kolumny 30:40:30",
+    "four-columns": "Cztery kolumny",
+    "showConfig": "Pokaż konfigurację",
+    "wipeConfig": "Wymaż konfigurację",
+    "saveConfig": "Zapisz konfigurację",
+    "addWidget": "Dodaj widżet",
+    "dashboardSettings": "Ustawienia panelu",
+    "apply": "zastosuj",
+    "cancel": "anuluj"
+}

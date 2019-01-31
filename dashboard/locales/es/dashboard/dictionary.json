@@ -1,0 +1,55 @@
+{
+    "title": "El ejemplo del tablero de instrumentos",
+    "message": "Se trata de una región",
+    "layoutType": "Four-columna",
+    "dummyText": "Zanahorias Lorem Ipsum, mejorar el ambiente ecológico. Jasmine necesidades de la conveniencia reservados. Jasmine masa. Cuando las montañas se tira de las Rays de Super Bowl al instante. Hasta que el fútbol, ​​ultricies, niños de fútbol, ​​el precio de uno, ensalada. Sin fotografía masa a nadie allí. hasta el pie justo ordenadas según plátanos y funcional, carne de res, de bajo costo. de hecho, la equidad, a la parrilla a la financiación de una terapia de vidas esterilizado. relé era pies de fútbol de fútbol precio suave. desarrolladores entero. Mañana proteína. vivir si no es siempre el elemento ",
+    "widget": {
+        "add": "Añadir a la columna",
+        "select": "Seleccionar un Widget",
+        "cancel": "Cancelar",
+        "apply": "Aplicar"
+    },
+    "widgetActions": {
+        "refresh": "Actualizar",
+        "anotherAction": "Otra de las acciones"
+    },
+    "settings": {
+        "showConfig": "Mostrar config",
+        "wipeConfig": "Wipe config",
+        "saveConfig": "Guardar configuración",
+        "addWidget": "Añadir widget",
+        "dashboardSettings": "Configuraciones del tablero",
+        "apply": "Aplicar",
+        "cancel": "Cancelar"
+    },
+    "updates": {
+        "apply": "Aplicar",
+        "header": "Cambiar Headgit er",
+        "text": "Texto del cambio"
+    },
+    "sampleTable": {
+        "header": "Tabla de ejemplo",
+        "type": "SampleTable"
+    },
+    "sampleWidget": {
+        "header": "Sample Widget",
+        "type": "SampleWidget"
+    },
+    "lineChart": {
+        "header": "Línea Gráfico simple",
+        "type": "LineChart"
+    },
+    "pieChart": {
+        "header": "Gráfico de sectores",
+        "type": "Gráfico circular"
+    },
+    "sampleRegion": {
+        "header": "Muestra Región",
+        "type": "SampleRegion"
+    },
+    "nonClosingWidget": {
+        "header": "Un widget no se puede cerrar,",
+        "type": "SimpleWidget",
+        "content": "Un widget no se puede cerrar. Un widget no se puede cerrar. Este control puede no ser cerrado."
+    }
+}

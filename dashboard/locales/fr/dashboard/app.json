@@ -1,0 +1,17 @@
+{
+    "title": "Exemple de Tableau de bord",
+    "one-column": "Une colonne",
+    "two-columns": "Deux colonnes",
+    "two-columns-30-70": "Deux colonnes 30:70",
+    "two-columns-70-30": "Deux colonnes 70:30",
+    "three-columns": "Trois colonnes",
+    "three-columns-30-40-30": "Trois colonnes 30:40:30",
+    "four-columns": "Quatre  colonnes",
+    "showConfig": "Afficher la configuration",
+    "wipeConfig": "Effacer la configuration",
+    "saveConfig": "Sauvegarder la configuration",
+    "addWidget": "Ajouter un widget",
+    "dashboardSettings": "Configuration du tableau",
+    "apply": "appliquer",
+    "cancel": "annuler"
+}

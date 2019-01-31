@@ -1,0 +1,70 @@
+{
+    "title": "Team Dashboard",
+    "message": "This is a region.",
+    "layoutType": "four-columns",
+    "dummyText": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.",
+    "dashboard": {
+        "emptyColumn": "Drag and drop a widget to display it here",
+        "emptyDashboardText": "Add a widget to display it here"
+    },
+    "tooltips": {
+        "settingsText": "Settings"
+    },
+    "widget": {
+        "add": "Add to column",
+        "select": "Select a Widget",
+        "cancel": "Cancel",
+        "apply": "Apply"
+    },
+    "widgetActions": {
+        "closeText": "Close",
+        "refresh": "Refresh",
+        "anotherAction": "Another Action",
+        "maximize": "Maximize",
+        "minimize": "Minimize",
+        "update": "Update Data"
+    },
+    "settings": {
+        "showConfig": "Show config",
+        "wipeConfig": "Wipe config",
+        "saveConfig": "Save config",
+        "addWidget": "Add Widget",
+        "dashboardSettings": "Dashboard Settings",
+        "apply": "apply",
+        "cancel": "cancel"
+    },
+    "updates": {
+        "apply": "apply",
+        "header": "Change Header",
+        "text": "Change Text"
+    },
+    "table": {
+        "header": "Team Table",
+        "type": "teamTable"
+    },
+    "sampleTable": {
+        "header": "Sample Table",
+        "type": "SampleTable"
+    },
+    "sampleWidget": {
+        "header": "Sample Widget",
+        "type": "SampleWidget"
+    },
+    "lineChart": {
+        "header": "Simple Line Chart",
+        "type": "LineChart"
+    },
+    "pieChart": {
+        "header": "Pie Chart",
+        "type": "PieChart"
+    },
+    "sampleRegion": {
+        "header": "Sample Region",
+        "type": "SampleRegion"
+    },
+    "nonClosingWidget": {
+        "header": "This widget can not be closed",
+        "type": "SimpleWidget",
+        "content": "This widget can not be closed. This widget can not be closed. This widget can not be closed."
+    }
+}

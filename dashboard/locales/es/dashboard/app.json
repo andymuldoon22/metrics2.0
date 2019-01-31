@@ -1,0 +1,17 @@
+{
+    "title": "Ejemplo del tablero",
+    "one-column": "Une colonne",
+    "two-columns": "Dos columnas",
+    "two-columns-30-70": "Dos columnas 30:70",
+    "two-columns-70-30": "Dos columnas 70:30",
+    "three-columns": "Tres columnas",
+    "three-columns-30-40-30": "Tres columnas 30:40:30",
+    "four-columns": "Cuatro columnas",
+    "showConfig": "Mostrar configuración",
+    "wipeConfig": "Limpiar configuración",
+    "saveConfig": "Guardar configuración",
+    "addWidget": "Agregar widget",
+    "dashboardSettings": "Preferencias del tablero",
+    "apply": "validar",
+    "cancel": "cancelar"
+}
