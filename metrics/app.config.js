@@ -4,6 +4,7 @@ define({
         locales: ['en-us']
     },
     children: [
-        {app: 'tiles'}
+        {app: 'tiles'},
+		{app: 'management'}
     ]
 });
