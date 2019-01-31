@@ -29,6 +29,7 @@ define([
                 modifiers: [
                     {name: "striped"}
                 ],
+                // call api
                 data: [
                     {col1: "Roose", col2: "value 1 2", col3: "value 1 3", col4: "value 1 4", col5: "value 1 5"},
                     {col1: "value 1 1", col2: "value 1 2", col3: "value 1 3", col4: "value 1 4", col5: "value 1 5"},
