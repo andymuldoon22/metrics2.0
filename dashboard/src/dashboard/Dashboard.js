@@ -2,11 +2,12 @@
 define([
     'jscore/core',
     'layouts/TopSection',
+    './services/TeamService',
     'i18n!dashboard/dictionary.json',
     './widgets/sampleWidget/SampleWidget',
     './regions/main/Main',
     // 'ui-example-lib/Navigation'
-], function (core, TopSection, dictionary, SampleWidget, Main
+], function (core, TopSection, teamService, dictionary, SampleWidget, Main
     //, 
    // navigationUtils
     ) {
@@ -15,6 +16,8 @@ define([
     return core.App.extend({
 
         onStart: function () {
+
+            // teamService.getDashStats(this.updateDisplay.bind(this));
 
             this.topSection = new TopSection({
                 context: this.getContext(),
@@ -63,7 +66,13 @@ define([
             this.topSection.setContent(new Main({context: this.getContext()}));
 
             this.topSection.attachTo(this.getElement());
-        }
+        },
+        updateDisplay: function(data){
+            //refresh display if it has been rendered
+            // var elt = new core.Element();
+            // elt.setText(data.message);
+            // this.view.getLeft().append(elt);
+        },
     });
 
 });
