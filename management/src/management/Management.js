@@ -23,6 +23,8 @@ define([
                 context: this.getContext()
             });
 
+            var eventBus = this.getEventBus();
+
             var topSection = new TopSection({
                 breadcrumb: this.options.breadcrumb,
                 title: this.options.properties.title,
@@ -32,7 +34,8 @@ define([
                     color: 'paleBlue',
                     name: "Add new team",
                     action: function () {
-                        eventBus.publish('sayhello');
+                        // eventBus.publish('sayhello');
+                        showClickedActionDialog(this);
                     }
                 },
                 {
@@ -53,8 +56,6 @@ define([
 
                 ]
             });
-
-          
 
             topSection.setContent(teamTable);
 
@@ -85,5 +86,12 @@ define([
         // See complete documentation about the application lifecycle in the Container docs.
 
     });
+
+    function showClickedActionDialog(me) {
+        console.log('here it goes again');
+        console.log(window.location.href + '/form');
+        window.open(window.location.href + '/form',"_self")
+
+    }
 
 });

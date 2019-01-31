@@ -15,7 +15,6 @@ define([
 
         onStart: function () {
             this.allApps = this.options.apps;
-            console.log(this.allApps);
             var container = this.view.getContainer();
 
             this.controls = new LauncherControls({});
@@ -36,7 +35,6 @@ define([
 
             this.launcherTiles.addEventHandler(LauncherTiles.prototype.LAUNCHER_LAUNCH, function (app) {
                 // can track last time appName was launched, etc.
-                console.log("Launched app '" + app.title + "' (" + app.appName + ") at " + new Date());
             });
             this.launcherTiles.attachTo(container);
 

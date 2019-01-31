@@ -15,7 +15,6 @@ define([
 
         onStart: function () {
             this.allApps = this.options.apps;
-            console.log(this.allApps);
             var container = this.view.getContainer();
 
             this.controls = new LauncherControls({});
@@ -36,7 +35,6 @@ define([
 
             this.launcherTiles.addEventHandler(LauncherTiles.prototype.LAUNCHER_LAUNCH, function (app) {
                 // can track last time appName was launched, etc.
-                console.log("Launched app '" + app.title + "' (" + app.appName + ") at " + new Date());
             });
             this.launcherTiles.attachTo(container);
 
@@ -78,55 +76,5 @@ define([
         isShowOnlyFavorites: function () {
             return this.controls.isShowOnlyFavorites();
         },
-
-        // getDisplayView: function () {
-        //     return this.controls.getDisplayView();
-        // },
-        // setDisplayView: function (view) {
-        //     this.controls.setDisplayView(view);
-        // },
-
-        // showMessage: function (icon, header, description) {
-        //     var message = this.view.getMessage();
-        //     if (this.infoW) {
-        //         // Remove InlineMessage previously displayed
-        //         this.infoW.destroy();
-        //     }
-        //     this.infoW = new InlineMessage({
-        //         "icon": icon,
-        //         "header": header,
-        //         "description": description
-        //     });
-        //     this.infoW.attachTo(message);
-        //     message.setModifier("visible");
-        // },
-
-        // hideMessage: function () {
-        //     var message = this.view.getMessage();
-        //     if (this.infoW) {
-        //         // Remove InlineMessage previously displayed
-        //         this.infoW.destroy();
-        //         this.infoW = undefined;
-        //     }
-        //     message.removeModifier("visible");
-        // },
-
-        // savePreferences: function (quiet) {
-        //     //TODO make REST call to save state of favorites, user's current view selection, etc.
-
-        //     if (!quiet) {
-        //         var notificationW = new Notification({
-        //             label: Dictionary.get('preferencesSaved'),
-        //             color: "green",
-        //             icon: "tick",
-        //             showAsToast: true,
-        //             autoDismiss: true,
-        //             autoDismissDuration: 1000
-        //         });
-        //         notificationW.attachTo(this.getElement());
-        //     }
-        // }
-
     });
-
 });

@@ -5,6 +5,7 @@ define({
     },
     children: [
         {app: 'tiles'},
-		{app: 'management'}
+        {app: 'management'},
+        {app: 'dashboard'}
     ]
 });

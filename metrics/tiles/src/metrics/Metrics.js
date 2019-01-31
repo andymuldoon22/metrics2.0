@@ -12,7 +12,7 @@ define([
          * Called when the app is first instantiated in the current tab for the first time.
          */
         onStart: function () {
-
+            console.log('metrics 3');
             var launcherTiles = new LauncherTiles({
                 apps: [{
                     appName: 'app1',

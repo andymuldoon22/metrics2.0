@@ -14,6 +14,7 @@ define([
          * Called when the app is first instantiated in the current tab for the first time.
          */
         onStart: function () {
+            console.log('metrics 2');
             var eventBus = this.getEventBus(),
                 topSection = new TopSection({
                     breadcrumb: this.options.breadcrumb,

@@ -15,7 +15,6 @@ define([
         },
 
         getContainer: function () {
-            // console.log(this.getElement(".eaLauncherTilesExample"));
             return this.getElement().find(".eaLauncherTilesExample-Container");
         },
 

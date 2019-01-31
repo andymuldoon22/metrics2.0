@@ -25,6 +25,9 @@
         "container": "1.14.12",
         "i18n": "2.4.8",
         "assets": "1.10.3",
-        "layouts": "1.8.14"
+        "layouts": "1.8.14",
+        "chartlib": "1.7.0",
+        "tablelib": "0.10.13",
+        "formvalidator": "0.2.2"
     }
 }

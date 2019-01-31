@@ -2,7 +2,7 @@
 
 set -e
 
-cd ./metrics
+cd ./tiles
 
 rm -rf .cdt
 cdt2 package install --autofill
@@ -11,7 +11,7 @@ echo "-------------------------------------------"
 echo "Linking to libraries and child applications"
 echo "$childApp"
 for childApp in ../*; do
-    if [ "$childApp" == "../metrics" ] || [ "$childApp" == "../script" ]; then
+    if [ "$childApp" == "./tiles" ] || [ "$childApp" == "../script" ]; then
        continue
     fi
 

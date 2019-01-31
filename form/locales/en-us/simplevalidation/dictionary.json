@@ -1,0 +1,29 @@
+{
+    "register": "Add A New Team",
+    "teamName": {
+        "label": "Team Name",
+        "placeholder": "Team Name",
+        "error": "Team Name required"
+    },
+    "name": {
+        "label": "Employee Name",
+        "placeholder": "Employee Name"
+    },
+    "sprint": {
+        "label": "Sprint Number",
+        "placeholder": "Sprint Number",
+        "error": "Valid Sprint required"
+    },
+    "button": {
+        "save": "Add Team"
+    },
+    "comment": {
+        "label": "Comment",
+        "placeholder": "Type your comments here",
+        "error": "Empty comment"
+    },
+    "validate": {
+        "success": "ok",
+        "error": "error in "
+    }
+}
