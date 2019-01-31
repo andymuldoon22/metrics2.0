@@ -2,7 +2,7 @@ define([
     "jscore/core",
     "tablelib/Table",
     "tablelib/plugins/ColorBand",
-    '../../services/TeamService'
+    "../../services/TeamService"
 ], function (core, Table, ColorBand, teamService) {
     return core.Widget.extend({
         id: 'SampleTable',
@@ -55,6 +55,7 @@ define([
             this.table.attachTo(this.getElement());
         },
         onViewReady: function () {
+            //format data into table structure
             teamService.getDashStats(function (data) {
                 this.initializeTable(data);
             }.bind(this));

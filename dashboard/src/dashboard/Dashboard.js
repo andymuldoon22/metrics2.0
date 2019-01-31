@@ -2,7 +2,7 @@
 define([
     'jscore/core',
     'layouts/TopSection',
-    'services/TeamService',
+    './services/TeamService',
     'i18n!dashboard/dictionary.json',
     './widgets/sampleWidget/SampleWidget',
     './regions/main/Main',
@@ -17,7 +17,7 @@ define([
 
         onStart: function () {
 
-            teamService.getDashStats(this.updateDisplay.bind(this));
+            // teamService.getDashStats(this.updateDisplay.bind(this));
 
             this.topSection = new TopSection({
                 context: this.getContext(),
