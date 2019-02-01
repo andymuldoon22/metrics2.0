@@ -71,14 +71,15 @@ define([
                 //     ]
                 // }
                 rawData,
-                data: [
-                    {col1: "Team X", col2: "Bob, Alice, Eve"},
-                    {col1: "Team Y", col2: "Greg, Patrick"},
-                    {col1: "Team Z", col2: "Mary, Alan, Joy"}
-                ],
+                data: 
+                    rawData
+                    // {col1: "Team X", col2: "Bob, Alice, Eve"},
+                    // {col1: "Team Y", col2: "Greg, Patrick"},
+                    // {col1: "Team Z", col2: "Mary, Alan, Joy"}
+                ,
                 columns: [
-                    {title: "Team Name", attribute: "col1", width: "150px"},
-                    {title: "Team Members", attribute: "col2", width: "150px"}
+                    {title: "Team Name", attribute: "name", width: "150px"},
+                    {title: "Team Members", attribute: "members", width: "150px"}
                 ]
             };
 
