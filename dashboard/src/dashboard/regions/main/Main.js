@@ -10,12 +10,10 @@ define([
     '../../widgets/pieChart/Pie',
     '../sampleRegion/SampleRegion',
     '../../widgets/settings/Settings',
-    '../../widgets/table/Table',
     'container/api',
     './MainView'
 ], function (core, Dashboard, dictionary, Dropdown, SampleWidget, LineChart, SampleTable, 
-    AddWidget, Pie,
-     SampleRegion, Settings, Table, container, View) {
+    AddWidget, Pie, SampleRegion, Settings, container, View) {
 
     return core.Region.extend({
 
@@ -40,17 +38,11 @@ define([
 
             // available widgets for the user to add to the dashboard
             this.availableWidgets = {
-                // // Add the import!!!!
-                Table: {
-                    header: dictionary.get('table.header'),
-                    type: 'Table',
+                SampleTable: {
+                    header: dictionary.get('sampleTable.header'),
+                    type: 'SampleTable',
                     config: {}
                 },
-                // SampleTable: {
-                //     header: dictionary.get('sampleTable.header'),
-                //     type: 'SampleTable',
-                //     config: {}
-                // },
                 SampleWidget: {
                     header: dictionary.get('sampleWidget.header'),
                     type: 'SampleWidget',
@@ -151,19 +143,12 @@ define([
                     items: [
                         [
                             {
-                                header: dictionary.get('table.header'),
-                                type: 'Table',
+                                header: dictionary.get('sampleTable.header'),
+                                type: 'SampleTable',
                                 config: {},
                                 settings: false,
                                 maximizable: true
                             },
-                            // {
-                            //     header: dictionary.get('sampleTable.header'),
-                            //     type: 'SampleTable',
-                            //     config: {},
-                            //     settings: false,
-                            //     maximizable: true
-                            // },
                             {
                                 header: dictionary.get('sampleRegion.header'),
                                 type: 'SampleRegion',
@@ -228,8 +213,7 @@ define([
             }
 
             config.context = this.getContext();
-            config.references = [LineChart, SampleWidget, Pie, Table, SampleTable, 
-                SampleRegion];
+            config.references = [LineChart, SampleWidget, Pie, SampleTable, SampleRegion];
 
             this.dashboard = new Dashboard(config);
             this.dashboard.attachTo(this.view.getElement());

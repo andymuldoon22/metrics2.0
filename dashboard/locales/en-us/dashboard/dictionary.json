@@ -38,12 +38,8 @@
         "header": "Change Header",
         "text": "Change Text"
     },
-    "table": {
-        "header": "Team Table",
-        "type": "teamTable"
-    },
     "sampleTable": {
-        "header": "Sample Table",
+        "header": "Teams Table",
         "type": "SampleTable"
     },
     "sampleWidget": {

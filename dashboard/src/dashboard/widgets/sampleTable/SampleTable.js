@@ -1,8 +1,9 @@
 define([
     "jscore/core",
     "tablelib/Table",
-    "tablelib/plugins/ColorBand"
-], function (core, Table, ColorBand) {
+    "tablelib/plugins/ColorBand",
+    "../../services/TeamService"
+], function (core, Table, ColorBand, teamService) {
     return core.Widget.extend({
         id: 'SampleTable',
         actions: [
@@ -29,6 +30,7 @@ define([
                 modifiers: [
                     {name: "striped"}
                 ],
+                // call api
                 data: [
                     {col1: "Roose", col2: "value 1 2", col3: "value 1 3", col4: "value 1 4", col5: "value 1 5"},
                     {col1: "value 1 1", col2: "value 1 2", col3: "value 1 3", col4: "value 1 4", col5: "value 1 5"},
@@ -48,13 +50,47 @@ define([
             };
 
         },
-        initializeTable: function () {
-            this.table = new Table(this.tableConfig);
+        initializeTable: function (rawData) {
+
+            this.tableConfig = {
+                plugins: [
+                    new ColorBand({
+                        color: function (row) {
+                            return row.getData().status === 1 ? '#e94d47' : '#a1c845'; // green_80 / red_80
+                        }
+                    })
+                ],
+                modifiers: [
+                    {name: "striped"}
+                ],
+                // call api
+
+                // for (element in rawData) {
+                //     data: [
+                //         {col1: rawData.element, col2: rawData.teamMembers.for.teamID},
+                //     ]
+                // }
+                rawData,
+                data: [
+                    {col1: "Team X", col2: "Bob, Alice, Eve"},
+                    {col1: "Team Y", col2: "Greg, Patrick"},
+                    {col1: "Team Z", col2: "Mary, Alan, Joy"}
+                ],
+                columns: [
+                    {title: "Team Name", attribute: "col1", width: "150px"},
+                    {title: "Team Members", attribute: "col2", width: "150px"}
+                ]
+            };
+
+
+            this.table = new Table(this.tableConfig);   //this.tableConfig    OR     data
             this.table.attachTo(this.getElement());
         },
         onViewReady: function () {
-            this.initializeTable();
-
+            //format data into table structure
+            teamService.getDashStats(function (data) {
+                this.initializeTable(data);
+            }.bind(this));
         },
         onSettings: function () {
 
