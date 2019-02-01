@@ -2,8 +2,9 @@ define([
     "jscore/core",
     'chartlib/charts/Pie',
     'container/api',
-    'i18n!dashboard/dictionary.json'
-], function (core, Pie, container, dictionary) {
+    'i18n!dashboard/dictionary.json',
+    "../../services/TeamService"
+], function (core, Pie, container, dictionary, teamService) {
 
     return core.Widget.extend({
 
@@ -14,13 +15,13 @@ define([
             action: function () {
 
                 var newData = [{
-                    label: '2009',
+                    label: 'Blue Whale',
                     value: Math.random() * 30
                 }, {
-                    label: '2010',
+                    label: 'Barred Owl',
                     value: Math.random() * 30
                 }, {
-                    label: '2011',
+                    label: 'Woodswallow',
                     value: Math.random() * 30
                 }];
 
@@ -29,20 +30,33 @@ define([
         }],
 
         onViewReady: function () {
+//get data here from API
+            // teamId
+            teamService.getTeamIdMemberData(1)
+                //function (data) {
+                //this.initializeTable(data);
+            //}.bind(this));
+            
+            // data.element
+
+            var commitData = [];
+            teamService.getTeamIdMemberData(1, function (data) {
+                data.forEach(function (item) {
+                    var pieEntry = {
+                        label: item.name,
+                        value: item.commits
+                    };
+                    commitData.push(pieEntry);
+                })
+            }); 
+ 
+
+
             this.getElement().setStyle('height', '300px');
 
             this.pieChart = new Pie({
                 element: this.getElement(),
-                data: [{
-                    label: '2009',
-                    value: 104
-                }, {
-                    label: '2010',
-                    value: 26
-                }, {
-                    label: '2011',
-                    value: 49
-                }],
+                data: commitData,
                 legend: {
                     align: 'callouts'
                 },

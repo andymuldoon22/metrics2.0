@@ -1,8 +1,7 @@
 define([
     'jscore/core',
     'text!./management.html',
-    'styles!./management.less'
-], function (core, template, styles) {
+], function (core, template) {
     'use strict';
 
     return core.View.extend({
@@ -11,12 +10,8 @@ define([
             return template;
         },
 
-        getStyle: function () {
-            return styles;
-        },
-
         getMain: function () {
-            return this.getElement().find('.eaWidget_events-main');
+            return this.getElement().find('.eaManagement-main');
         }
 
     });

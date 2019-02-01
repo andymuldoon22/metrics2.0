@@ -18,10 +18,17 @@ define([
             return styles;
         },
         getForm: function () {
+            console.log(this.getElement().find(_prefix + '-form'));
             return this.getElement().find(_prefix + '-form');
         },
         getSaveBtn: function () {
             return this.getElement().find(_prefix + '-saveBtn');
         }
     });
+
+    function myFunction () {
+        console.log('button pressed 1');
+
+    };
+
 });

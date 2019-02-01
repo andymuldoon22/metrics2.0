@@ -215,7 +215,7 @@ define([
             config.context = this.getContext();
             config.references = [LineChart, SampleWidget, Pie, SampleTable, SampleRegion];
 
-            this.dashboard = new Dashboard(config);
+            this.dashboard = new Dashboard({context: this.getContext(), items: []});
             this.dashboard.attachTo(this.view.getElement());
             this.persistConfig();
 

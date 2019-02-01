@@ -12,24 +12,16 @@ define([
         /**
          * Called when the app is first instantiated in the current tab for the first time.
          */
-        onStart: function () {
-            console.log('metrics 1');
-            console.log(this);
-            console.log(this.options);    
-            console.log(this.options.properties.children);    
-            console.log(this.options.properties.children[0]);  
-            console.log(this.options.properties.children[0]); 
-            var myobject = this.options.properties.children[0]; 
-            var myobject1 = this.options.properties.children[1];  
-            console.log(myobject.app);
-            console.log(myobject1.app);
+        onStart: function () { 
+            var myobject = this.options.properties.children[0].app; 
+            var myobject1 = this.options.properties.children[1].app;  
 
             // Not using TopSection - no need for title or breadcrumbs
             this.main = new Main({
                 context: this.getContext(),
                 apps: [{
-                    appName: myobject.app,
-                    title: myobject.app,
+                    appName: myobject,
+                    title: myobject,
                     subtitle: 'Metrics',
                     url: '#management',
                     icon: 'network',
@@ -37,8 +29,8 @@ define([
                     description: 'Add/Edit/Delete Teams',
                     // favorite: true
                 }, {
-                    appName: myobject1.app,
-                    title: myobject1.app,
+                    appName: myobject1,
+                    title: myobject1,
                     subtitle: 'Metrics',
                     url: '#dashboard',
                     icon: 'user',

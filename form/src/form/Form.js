@@ -15,6 +15,7 @@ define([
             this.layout = new TopSection({
                 context: this.getContext(),
                 title: this.options.properties.title,
+                breadcrumb: this.options.breadcrumb,
                 // breadcrumb: navigationUtils.adaptBreadcrumbForExample('Form Validator', this.options.breadcrumb),
                 defaultActions: []
             });

@@ -21,7 +21,6 @@ define([
         },
 
         onViewReady: function () {
-
             var formAValidator = new Validator({
                 element: this.view.getForm(),
                 fields: {
@@ -53,12 +52,16 @@ define([
                     }
                 }
             });
-
+            var that = this;
             this.view.getSaveBtn().addEventHandler('click', function () {
                 // checkValidity runs the validation for all the fields
                 // then will call success or error callback
+                console.log(that);
+                that.view.getForm();
                 formAValidator.checkValidity({
                     success: function () {
+                        
+                        
                         alert(dictionary.get('validate.success'));
                     },
                     error: function (arr) {
@@ -66,6 +69,15 @@ define([
                     }
                 });
             });
+        },
+
+        myFunction: function (){
+            console.log('button pressed');
         }
     });
+
+    function myFunction () {
+        console.log('button pressed 1');
+
+    };
 });

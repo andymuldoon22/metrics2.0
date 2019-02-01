@@ -1,1 +1,0 @@
-{"name":"chartlib","type":"library","version":"1.7.0","title":"Charting Library","description":"The charting library provides an easy way to create an Ericsson branded chart in your application.","docs":"http://cifwk-oss.lmera.ericsson.se:8081/nexus/content/sites/tor/chartlib/1.7.0/","cdtBuild":"2.5.8","dependencies":{"jscore":"1.8.0"}}

@@ -6,7 +6,7 @@ define([
 ], function (core, template, styles) {
     'use strict';
 
-    var __prefix = '.eaSimpleSelectionTable-wUserTable';
+    var __prefix = '.eaManagement-wTeamTable';
 
     return core.View.extend({
 
