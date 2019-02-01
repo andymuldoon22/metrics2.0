@@ -148,7 +148,8 @@ define([
                                 config: {},
                                 settings: false,
                                 maximizable: true
-                            },
+                            }
+                            ,
                             {
                                 header: dictionary.get('sampleRegion.header'),
                                 type: 'SampleRegion',

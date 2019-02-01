@@ -51,7 +51,7 @@
         "type": "LineChart"
     },
     "pieChart": {
-        "header": "Team Blue Whale member contribution",
+        "header": "Team member contribution",
         "type": "PieChart"
     },
     "sampleRegion": {
