@@ -33,12 +33,11 @@ define([
                     icon: 'add_white',
                     name: dictionary.addTeam,
                     action: function () {
-<<<<<<< HEAD
+
                         // eventBus.publish('sayhello');
                         showClickedActionDialog(this);
-=======
                         //teamTable.deleteSelected();
->>>>>>> 9d7c329f641b94ab1ea27529c3e7d796bd933a84
+
                     }
                 },
                 {
