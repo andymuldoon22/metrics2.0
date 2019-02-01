@@ -2,11 +2,9 @@ define([
     'jscore/core',
     'i18n!management/dictionary.json',
     'layouts/TopSection',
-    './regions/main/Main',
     './widgets/team-table/TeamTable',
-    './regions/main/TableMain',
     './ManagementView'
-], function (core, dictionary, TopSection, Main, TeamTable, TableMain, View) {
+], function (core, dictionary, TopSection, TeamTable, View) {
     'use strict';
 
     return core.App.extend({
@@ -29,25 +27,27 @@ define([
                 context: this.getContext(),
                 defaultActions: [{
                     type: 'button',
-                    color: 'paleBlue',
-                    name: "Add new team",
+                    color: 'blue',
+                    icon: 'add_white',
+                    name: dictionary.addTeam,
+                    action: function () {
+                        //teamTable.deleteSelected();
+                    }
+                },
+                {
+                    type: 'button',
+                    name: dictionary.edit,
+                    icon: 'edit',
                     action: function () {
                         eventBus.publish('sayhello');
                     }
                 },
                 {
                     type: 'button',
-                    name: "View details",
-                    action: function () {
-                        eventBus.publish('sayhello');
-                    }
-                },
-                {
-                    type: 'button',
-                    name: "Delete",
+                    name: dictionary.delete,
                     icon: 'delete',
                     action: function () {
-                        eventBus.publish('sayhello');
+                        teamTable.deleteSelected();
                     }
                 }
 
@@ -59,6 +59,8 @@ define([
             topSection.setContent(teamTable);
 
             topSection.attachTo(this.getElement());
+
+
         },
 
         /**

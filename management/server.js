@@ -71,6 +71,7 @@ module.exports = function (app) {
             var teamSummary = {};
             teamSummary.name = item.name;
             teamSummary.id = item.id;
+            teamSummary.avatar = item.avatar;
             teamSummary.members = item.members.map(function (item) {
                 return item['name'];
             }).join(", ");
@@ -198,7 +199,7 @@ module.exports = function (app) {
     }
 
     function getRandomAvatar() {
-        return chance.avatar({ fileExtension: 'jpg' });
+        return chance.avatar();
     }
 
 }

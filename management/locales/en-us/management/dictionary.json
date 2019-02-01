@@ -1,4 +1,12 @@
 {
     "sayHello": "Say Hello",
-    "hello": "Hello World!"
+    "hello": "Hello World!",
+    "addTeam": "Add new team",
+    "edit": "Edit",
+    "delete": "Delete",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "avatar": "Avatar",
+    "teamName": "Team name",
+    "memberNames": "Member names"
 }

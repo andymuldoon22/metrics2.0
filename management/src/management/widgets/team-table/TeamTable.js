@@ -3,9 +3,11 @@ define([
     './TeamTableView',
     'tablelib/Table',
     'tablelib/plugins/Selection',
+    './cells/icon-cell/ImgCell',
     '../../services/TeamService',
+    'widgets/Dialog',
     'i18n!management/dictionary.json'
-], function (core, View, Table, Selection, teamService, dictionary) {
+], function (core, View, Table, Selection, ImgCell, teamService, Dialog, dictionary) {
     'use strict';
 
     return core.Widget.extend({
@@ -14,23 +16,30 @@ define([
 
         onViewReady: function () {
 
+            var tableColumns = [
+                { title: '#', attribute: 'id', width: '15px' },
+                { title: dictionary.avatar, attribute: 'avatar', width: '50px', cellType: ImgCell },
+                { title: dictionary.teamName, attribute: 'name', width: '100px' },
+                { title: dictionary.memberNames, attribute: 'members', width: '500px' },
+            ];
+
+            var tablePlugins = [
+                new Selection({
+                    checkboxes: true,
+                    selectableRows: true,
+                    multiselect: false,
+                    bind: true
+                })
+            ];
+
+            var tableModifiers = [
+                { name: 'striped' } // Applying a different table style
+            ];
+
             var table = new Table({
-                columns: [
-                    { title: '#', attribute: 'id', width: '15px' },
-                    { title: 'Team name', attribute: 'name', width: '100px' },
-                    { title: 'Member names', attribute: 'members', width: '500px' },
-                ],
-                plugins: [
-                    new Selection({
-                        checkboxes: true,
-                        selectableRows: true,
-                        multiselect: true,
-                        bind: true
-                    })
-                ],
-                modifiers: [
-                    { name: 'striped' } // Applying a different table style
-                ]
+                columns: tableColumns,
+                plugins: tablePlugins,
+                modifiers: tableModifiers
             });
 
             table.addEventHandler('rowselectend', this.onTableSelect.bind(this));
@@ -38,57 +47,45 @@ define([
 
             this.table = table;
 
-            teamService.getTeamsSummary(function (data) {
-                this.setData(data);
-            }.bind(this));
+            this.populateTableData();
+        },
 
+
+        populateTableData: function () {
+            teamService.getTeamsSummary(function (data) {
+                this.table.setData(data);
+            }.bind(this));
         },
 
         onTableSelect: function (selectedItems) {
-            var userData = selectedItems.map(function (item) {
-                return item.getData();
+            this.selectedTeam = selectedItems.map(function (item) {
+                return item.getData()[0];
             });
-            this.trigger('user:selected', userData);
         },
 
-        setData: function (data) {
-            if (this.emptyTable === true) {
-                this.table.attachTo(this.view.getTable());
-                this.infoMessage.destroy();
 
-                delete this.emptyTable;
-                delete this.infoMessage;
-            }
-
-            this.table.setData(data);
-            this.data = data;
-
-            if (data.length === 0 && this.infoMessage === undefined) {
-                this.emptyTable = true;
-                this.table.detach();
-                this.infoMessage = new InlineMessage({
-                    header: dictionary.get('table.noData.header'),
-                    description: dictionary.get('table.noData.message')
-                });
-                this.infoMessage.attachTo(this.view.getMessageHolder());
-            }
-        },
-
-        deleteUsers: function (users) {
-            var data = this.data.filter(function (item) {
-                var indexOfItem = users.indexOf(item);
-
-                if (indexOfItem !== -1) {
-                    users.splice(indexOfItem, 1);
-                    return false;
-                }
-
-                return true;
+        deleteSelected: function () {
+            var id = this.selectedTeam.id;
+            var name = this.selectedTeam.name;
+            var dialogWidget = new Dialog({
+                header: 'Delete team',
+                content: 'Do you confirm you want to delete ' + name + '?',
+                buttons: [{
+                    caption: dictionary.confirm,
+                    color: 'darkBlue',
+                    action: function () {
+                        teamService.deleteTeamById(id, function (data) { });
+                        this.populateTableData();
+                        dialogWidget.hide();
+                    }.bind(this)
+                }, {
+                    caption: dictionary.cancel,
+                    action: function () {
+                        dialogWidget.hide();
+                    }
+                }]
             });
-
-            this.setData(data);
-
-            this.trigger('user:selected', []);
+            dialogWidget.show();
         }
 
 
