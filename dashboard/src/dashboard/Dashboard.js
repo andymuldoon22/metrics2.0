@@ -16,9 +16,6 @@ define([
     return core.App.extend({
 
         onStart: function () {
-
-            // teamService.getDashStats(this.updateDisplay.bind(this));
-
             this.topSection = new TopSection({
                 context: this.getContext(),
                 title: dictionary.get('title'),
@@ -66,12 +63,6 @@ define([
             this.topSection.setContent(new Main({context: this.getContext()}));
 
             this.topSection.attachTo(this.getElement());
-        },
-        updateDisplay: function(data){
-            //refresh display if it has been rendered
-            // var elt = new core.Element();
-            // elt.setText(data.message);
-            // this.view.getLeft().append(elt);
         },
     });
 
