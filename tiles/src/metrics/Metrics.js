@@ -27,7 +27,6 @@ define([
                     icon: 'network',
                     color: '#7b0663',
                     description: 'Add/Edit/Delete Teams',
-                    // favorite: true
                 }, {
                     appName: myobject1,
                     title: myobject1,
@@ -36,7 +35,6 @@ define([
                     icon: 'user',
                     color: '#00625f',
                     description: 'Get Information on how a team is performing',
-                    // favorite: false
                 }],
                 showFavorites: false
             });

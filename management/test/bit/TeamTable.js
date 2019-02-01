@@ -33,7 +33,7 @@ define([
         app.stop();
     });
 
-    describe('MessageBox functionality ', function () {
+    describe('Table functionality ', function () {
 
         it('Table is created', function () {
             console.log('test');
