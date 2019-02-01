@@ -31,7 +31,7 @@ define([
                     icon: 'add_white',
                     name: dictionary.addTeam,
                     action: function () {
-                        //teamTable.deleteSelected();
+                        // new
                     }
                 },
                 {
@@ -39,7 +39,7 @@ define([
                     name: dictionary.edit,
                     icon: 'edit',
                     action: function () {
-                        eventBus.publish('sayhello');
+                        // edit
                     }
                 },
                 {

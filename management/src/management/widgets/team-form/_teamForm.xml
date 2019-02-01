@@ -1,0 +1,94 @@
+<form>
+
+    <field label="{{f.input.label}}" name="input" required="required" info="{{f.input.info}}">
+        <text placeholder="{{f.input.placeholder}}" width="400"/>
+    </field>
+
+    <field label="{{f.disabledInput.label}}" name="disabledinput" info="{{f.disabledInput.info}}">
+        <text disabled="disabled" value="Some Value"/>
+    </field>
+
+    <field label="{{f.textarea.label}}" name="textarea" info="{{f.textarea.info}}">
+        <textarea/>
+    </field>
+
+    <field label="{{f.password.label}}" name="password" info="{{f.password.info}}">
+        <password/>
+    </field>
+
+    <field label="{{f.selectBox.label}}" name="select" info="{{f.selectBox.info}}">
+        <select>
+            <option value="0">{{f.items.0.name}}</option>
+            <option value="1" selected="selected">{{f.items.1.name}}</option>
+            <option value="2">{{f.items.2.name}}</option>
+        </select>
+    </field>
+
+    <separator/>
+
+    <field label="{{f.comboBox.label}}" name="combo" info="{{f.comboBox.info}}">
+        <combo repeat="repeat">
+            <option value="0">{{f.items.0.name}}</option>
+            <option value="1">{{f.items.1.name}}</option>
+            <option value="2" selected="selected">{{f.items.2.name}}</option>
+        </combo>
+    </field>
+
+    <field label="{{f.multiSelectBox.label}}" name="multiselect" info="{{f.multiSelectBox.info}}">
+        <multiselect>
+            <option value="0">{{f.items.0.name}}</option>
+            <option value="1" selected="selected">{{f.items.1.name}}</option>
+            <option value="2" selected="selected">{{f.items.2.name}}</option>
+        </multiselect>
+    </field>
+
+    <field label="{{f.comboMultiSelect.label}}" name="combomultiselect" info="{{f.comboMultiSelect.info}}">
+        <combomultiselect>
+            <option value="0" selected="selected">{{f.items.0.name}}</option>
+            <option value="1">{{f.items.1.name}}</option>
+            <option value="2">{{f.items.2.name}}</option>
+        </combomultiselect>
+    </field>
+
+    <field label="{{f.switcher.label}}" info="{{f.switcher.info}}" name="switcher">
+        <switcher on-label="{{f.switcher.enabled}}" off-label="{{f.switcher.disabled}}" selected="selected"/>
+    </field>
+
+    <field label="{{f.radiogroup.label}}" info="{{f.radiogroup.info}}" name="radiogroup">
+        <radiogroup>
+            <option value="0" selected="selected">{{f.radiogroup.items.0.name}}</option>
+            <option value="1">{{f.radiogroup.items.1.name}}</option>
+        </radiogroup>
+    </field>
+
+    <field label="{{f.spinner.label}}" info="{{f.spinner.info}}" name="spinner">
+        <spinner min="0" max="10" value="0" size="5"/>
+    </field>
+
+    <field label="{{f.checkboxgroup.label}}" info="{{f.checkboxgroup.info}}" name="checkboxgroup">
+        <checkboxgroup>
+            <option value="0" selected="selected">{{f.checkboxgroup.items.0.name}}</option>
+            <option value="1" selected="selected">{{f.checkboxgroup.items.1.name}}</option>
+            <option value="2">{{f.checkboxgroup.items.2.name}}</option>
+        </checkboxgroup>
+    </field>
+
+    <field label="{{f.popupdatepicker.label}}" info="{{f.popupdatepicker.info}}" name="popupdatepicker">
+        <popupdatepicker type="datetime" utc="utc"/>
+    </field>
+
+    <struct label="{{f.structure}}" name="structure">
+        <struct label="{{f.nestedRepeatingStructure}}" name="nested_structure" repeat="repeat">
+            <field label="{{f.field}}" name="field1">
+                <text/>
+            </field>
+            <field label="{{f.field}}" name="field2">
+                <text/>
+            </field>
+            <field label="{{f.field}}" name="field3">
+                <text/>
+            </field>
+        </struct>
+    </struct>
+
+</form>

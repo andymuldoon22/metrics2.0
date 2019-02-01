@@ -3,6 +3,8 @@ define([
 ], function (net) {
     'use strict';
 
+
+
     function getTeamsSummary(successCallback, failureCallback) {
         net.ajax({
             url: "/teamsSummary",

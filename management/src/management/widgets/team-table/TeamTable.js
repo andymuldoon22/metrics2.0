@@ -59,14 +59,13 @@ define([
 
         onTableSelect: function (selectedItems) {
             this.selectedTeam = selectedItems.map(function (item) {
-                return item.getData()[0];
+                return item.getData();
             });
         },
 
-
         deleteSelected: function () {
-            var id = this.selectedTeam.id;
-            var name = this.selectedTeam.name;
+            var id = this.selectedTeam[0].id;
+            var name = this.selectedTeam[0].name;
             var dialogWidget = new Dialog({
                 header: 'Delete team',
                 content: 'Do you confirm you want to delete ' + name + '?',
@@ -87,7 +86,6 @@ define([
             });
             dialogWidget.show();
         }
-
 
 
     });
