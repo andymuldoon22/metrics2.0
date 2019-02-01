@@ -63,33 +63,20 @@ define([
                 modifiers: [
                     {name: "striped"}
                 ],
-                // call api
-
-                // for (element in rawData) {
-                //     data: [
-                //         {col1: rawData.element, col2: rawData.teamMembers.for.teamID},
-                //     ]
-                // }
                 rawData,
                 data: 
-                    rawData
-                    // {col1: "Team X", col2: "Bob, Alice, Eve"},
-                    // {col1: "Team Y", col2: "Greg, Patrick"},
-                    // {col1: "Team Z", col2: "Mary, Alan, Joy"}
-                ,
+                    rawData,
                 columns: [
-                    {title: "Team Name", attribute: "name", width: "150px"},
+                    {title: "Team Name", attribute: "name", width: "50px"},
                     {title: "Team Members", attribute: "members", width: "150px"}
                 ]
             };
 
-
-            this.table = new Table(this.tableConfig);   //this.tableConfig    OR     data
+            this.table = new Table(this.tableConfig);
             this.table.attachTo(this.getElement());
         },
         onViewReady: function () {
-            //format data into table structure
-            teamService.getDashStats(function (data) {
+            teamService.getTeamsSummary(function (data) {
                 this.initializeTable(data);
             }.bind(this));
         },
