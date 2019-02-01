@@ -31,7 +31,7 @@ define([
                     icon: 'add_white',
                     name: dictionary.addTeam,
                     action: function () {
-                        // new
+                        showClickedActionDialog(this);
                     }
                 },
                 {
@@ -53,8 +53,6 @@ define([
 
                 ]
             });
-
-          
 
             topSection.setContent(teamTable);
 
@@ -87,5 +85,12 @@ define([
         // See complete documentation about the application lifecycle in the Container docs.
 
     });
+
+    function showClickedActionDialog(me) {
+        console.log('here it goes again');
+        console.log(window.location.href + '/form');
+        window.open(window.location.href + '/form',"_self")
+
+    }
 
 });

@@ -2,8 +2,8 @@
     "parent": "$(parentJson)/app.json",
     "defaultPhase": "package",
     "properties": {
-        "package": "metrics",
-        "name": "Metrics",
+        "package": "form",
+        "name": "Form",
         "version": "1.0.0",
         "skeleton": "2.3.1",
         "skeletonType": "app"
@@ -25,9 +25,7 @@
         "container": "1.14.12",
         "i18n": "2.4.8",
         "assets": "1.10.3",
-        "chartlib": "1.7.0",
-        "tablelib": "0.10.13",
-        "formvalidator": "0.2.2",
-        "layouts": "1.8.14"
+        "layouts": "1.8.14",
+        "formvalidator": "0.2.2"
     }
 }

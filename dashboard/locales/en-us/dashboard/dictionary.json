@@ -51,7 +51,7 @@
         "type": "LineChart"
     },
     "pieChart": {
-        "header": "Pie Chart",
+        "header": "Team member contribution",
         "type": "PieChart"
     },
     "sampleRegion": {

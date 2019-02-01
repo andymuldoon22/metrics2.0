@@ -14,5 +14,5 @@ echo "----------------------------------"
 echo "Starting server on port ${PORT}"
 echo ""
 
-cd ../metrics
-cdt2 serve -p ${PORT}
+cd tiles
+cdt2 serve -p ${PORT} -m ../dashboard/server.js

@@ -3,6 +3,7 @@ define([
     'text!./_main.html',
     'styles!./_main.less'
 ], function (core, template, styles) {
+    'use strict';
 
     return core.View.extend({
 
@@ -14,12 +15,8 @@ define([
             return styles;
         },
 
-        getContainer: function () {
-            return this.getElement().find(".eaLauncherTilesExample-Container");
-        },
-
-        getMessage: function () {
-            return this.getElement().find(".eaLauncherTilesExample-Message");
+        getHello: function () {
+            return this.getElement().find('.eaForm-rMain-hello');
         }
 
     });

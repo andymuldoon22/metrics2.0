@@ -16,17 +16,13 @@ define([
         View: View,
 
         onViewReady: function () {
-            console.log('view ready');
             var viewElt = this.view;
-            console.log(viewElt);
-            console.log(viewElt.getStyle());
             var favoritesGroup = viewElt.getFavourites();
             // favoritesGroup.forEach(function(radio){
             //     radio.addEventHandler("click", function(){
             //         this.trigger(this.VIEW_CHANGE);
             //     }.bind(this));
             // }.bind(this));
-            console.log(favoritesGroup);
         },
 
                 /**

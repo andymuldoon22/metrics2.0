@@ -1,0 +1,8 @@
+{
+    "title": "Simple Validation",
+    "description": [
+        "This example shows how simple validation works by creating a simple registration form.  It implements the following validation methods:-",
+        "- HTML5 Validation",
+        "- checkValidity success / error"
+    ]
+}
