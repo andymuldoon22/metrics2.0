@@ -19,6 +19,7 @@ define([
             this.topSection = new TopSection({
                 context: this.getContext(),
                 title: dictionary.get('title'),
+                breadcrumb: this.options.breadcrumb,
                 // breadcrumb: navigationUtils.adaptBreadcrumbForExample('Layout Library', this.options.breadcrumb),
                 defaultActions: [
                     {
